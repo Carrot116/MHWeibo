@@ -10,7 +10,7 @@
 @class MHTabBar;
 
 @protocol MHTabBarDelegate <NSObject>
-- (void)tabBar:(MHTabBar*)tabBar didSelectedButtonFrom:(int)from To:(int)to;
+- (void)tabBar:(MHTabBar*)tabBar didSelectedButtonFrom:(NSInteger)from To:(NSInteger)to;
 @end
 
 

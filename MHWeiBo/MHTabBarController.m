@@ -12,8 +12,9 @@
 #import "MHMessageViewController.h"
 #import "MHMeViewController.h"
 #import "MHHomeViewController.h"
+#import "UIImage+IOSVersion.h"
 
-@interface MHTabBarController ()
+@interface MHTabBarController () < MHTabBarDelegate>
 
 @property (nonatomic, weak) MHTabBar* myTabBar;
 @end
@@ -29,7 +30,7 @@
 
 - (void)setupTabBar{
     MHTabBar* myTabBar = [[MHTabBar alloc] init];
-    myTabBar.backgroundColor = [UIColor redColor];
+    myTabBar.delegate = self;
     
     myTabBar.frame = self.tabBar.bounds;
     [self.tabBar addSubview:myTabBar];
@@ -38,24 +39,28 @@
 
 - (void)setupAllChildControllers{
     MHHomeViewController* home = [[MHHomeViewController alloc] init];
-    [self setupChildControllers:home title:@"首页" image:nil selectedImage:nil];
+    [self setupChildControllers:home title:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
     
     MHMessageViewController* message = [[MHMessageViewController alloc] init];
-    [self setupChildControllers:message title:@"消息" image:nil selectedImage:nil];
+    message.tabBarItem.badgeValue = @"99+";
+    [self setupChildControllers:message title:@"消息" image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
     
     MHDiscoverViewController* discover = [[MHDiscoverViewController alloc] init];
-    [self setupChildControllers:discover title:@"广场" image:nil selectedImage:nil];
+    discover.tabBarItem.badgeValue = @"1";
+    [self setupChildControllers:discover title:@"广场" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
     
     MHMeViewController* me = [[MHMeViewController alloc] init];
-    [self setupChildControllers:me title:@"我" image:nil selectedImage:nil];
+    me.tabBarItem.badgeValue = @"20";
+    [self setupChildControllers:me title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
 }
 
 - (void)setupChildControllers:(UIViewController*)controller title:(NSString*)title image:(NSString*)image selectedImage:(NSString*)selectedImage{
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:controller];
     controller.title = title;
-    controller.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    controller.tabBarItem.image = [UIImage imageNamed:image];
-    
-    [self addChildViewController:controller];
+    controller.tabBarItem.selectedImage = [UIImage imageWithName:selectedImage];
+    controller.tabBarItem.image = [UIImage imageWithName:image];
+
+    [self addChildViewController:nav];
     
     [self.myTabBar addTabButtonWithTabBarItem:controller.tabBarItem];
 }
@@ -68,6 +73,10 @@
             [view removeFromSuperview];
         }
     }
+}
+
+- (void)tabBar:(MHTabBar *)tabBar didSelectedButtonFrom:(NSInteger)from To:(NSInteger)to{
+    [self setSelectedIndex:to];
 }
 
 @end

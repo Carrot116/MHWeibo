@@ -11,6 +11,13 @@
 		080C85001C940D5700BC14ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 080C84FF1C940D5700BC14ED /* AppDelegate.m */; };
 		080C85021C940D5700BC14ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080C85011C940D5700BC14ED /* Assets.xcassets */; };
 		080C85051C940D5700BC14ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080C85031C940D5700BC14ED /* LaunchScreen.storyboard */; };
+		080C85171C941C9A00BC14ED /* MHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 080C85161C941C9A00BC14ED /* MHTabBarController.m */; };
+		080C851E1C941DDA00BC14ED /* MHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 080C851D1C941DDA00BC14ED /* MHTabBar.m */; };
+		080C85211C941F5D00BC14ED /* MHTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 080C85201C941F5D00BC14ED /* MHTabBarButton.m */; };
+		08A941B01C942DB200C68B84 /* MHDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A941AF1C942DB200C68B84 /* MHDiscoverViewController.m */; };
+		08A941B31C942DCA00C68B84 /* MHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A941B21C942DCA00C68B84 /* MHHomeViewController.m */; };
+		08A941B61C942DE600C68B84 /* MHMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A941B51C942DE600C68B84 /* MHMeViewController.m */; };
+		08A941B91C942DFD00C68B84 /* MHMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A941B81C942DFD00C68B84 /* MHMessageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +28,20 @@
 		080C85011C940D5700BC14ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		080C85041C940D5700BC14ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		080C85061C940D5700BC14ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		080C85151C941C9A00BC14ED /* MHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTabBarController.h; sourceTree = "<group>"; };
+		080C85161C941C9A00BC14ED /* MHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTabBarController.m; sourceTree = "<group>"; };
+		080C851C1C941DDA00BC14ED /* MHTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTabBar.h; sourceTree = "<group>"; };
+		080C851D1C941DDA00BC14ED /* MHTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTabBar.m; sourceTree = "<group>"; };
+		080C851F1C941F5D00BC14ED /* MHTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTabBarButton.h; sourceTree = "<group>"; };
+		080C85201C941F5D00BC14ED /* MHTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTabBarButton.m; sourceTree = "<group>"; };
+		08A941AE1C942DB200C68B84 /* MHDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHDiscoverViewController.h; sourceTree = "<group>"; };
+		08A941AF1C942DB200C68B84 /* MHDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHDiscoverViewController.m; sourceTree = "<group>"; };
+		08A941B11C942DCA00C68B84 /* MHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHHomeViewController.h; sourceTree = "<group>"; };
+		08A941B21C942DCA00C68B84 /* MHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHHomeViewController.m; sourceTree = "<group>"; };
+		08A941B41C942DE600C68B84 /* MHMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHMeViewController.h; sourceTree = "<group>"; };
+		08A941B51C942DE600C68B84 /* MHMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHMeViewController.m; sourceTree = "<group>"; };
+		08A941B71C942DFD00C68B84 /* MHMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHMessageViewController.h; sourceTree = "<group>"; };
+		08A941B81C942DFD00C68B84 /* MHMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHMessageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +74,12 @@
 		080C84FA1C940D5700BC14ED /* MHWeiBo */ = {
 			isa = PBXGroup;
 			children = (
+				080C851B1C941D8600BC14ED /* Models */,
+				080C851A1C941D7800BC14ED /* Controls */,
+				080C85191C941D6900BC14ED /* Views */,
+				080C85181C941D5A00BC14ED /* Controllers */,
 				080C84FE1C940D5700BC14ED /* AppDelegate.h */,
 				080C84FF1C940D5700BC14ED /* AppDelegate.m */,
-				080C85011C940D5700BC14ED /* Assets.xcassets */,
-				080C85031C940D5700BC14ED /* LaunchScreen.storyboard */,
-				080C85061C940D5700BC14ED /* Info.plist */,
 				080C84FB1C940D5700BC14ED /* Supporting Files */,
 			);
 			path = MHWeiBo;
@@ -66,9 +88,54 @@
 		080C84FB1C940D5700BC14ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				080C85011C940D5700BC14ED /* Assets.xcassets */,
+				080C85031C940D5700BC14ED /* LaunchScreen.storyboard */,
+				080C85061C940D5700BC14ED /* Info.plist */,
 				080C84FC1C940D5700BC14ED /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		080C85181C941D5A00BC14ED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				080C85151C941C9A00BC14ED /* MHTabBarController.h */,
+				080C85161C941C9A00BC14ED /* MHTabBarController.m */,
+				08A941AE1C942DB200C68B84 /* MHDiscoverViewController.h */,
+				08A941AF1C942DB200C68B84 /* MHDiscoverViewController.m */,
+				08A941B11C942DCA00C68B84 /* MHHomeViewController.h */,
+				08A941B21C942DCA00C68B84 /* MHHomeViewController.m */,
+				08A941B41C942DE600C68B84 /* MHMeViewController.h */,
+				08A941B51C942DE600C68B84 /* MHMeViewController.m */,
+				08A941B71C942DFD00C68B84 /* MHMessageViewController.h */,
+				08A941B81C942DFD00C68B84 /* MHMessageViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		080C85191C941D6900BC14ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				080C851C1C941DDA00BC14ED /* MHTabBar.h */,
+				080C851D1C941DDA00BC14ED /* MHTabBar.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		080C851A1C941D7800BC14ED /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				080C851F1C941F5D00BC14ED /* MHTabBarButton.h */,
+				080C85201C941F5D00BC14ED /* MHTabBarButton.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		080C851B1C941D8600BC14ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A941B31C942DCA00C68B84 /* MHHomeViewController.m in Sources */,
 				080C85001C940D5700BC14ED /* AppDelegate.m in Sources */,
+				080C85171C941C9A00BC14ED /* MHTabBarController.m in Sources */,
+				080C851E1C941DDA00BC14ED /* MHTabBar.m in Sources */,
+				080C85211C941F5D00BC14ED /* MHTabBarButton.m in Sources */,
+				08A941B91C942DFD00C68B84 /* MHMessageViewController.m in Sources */,
+				08A941B61C942DE600C68B84 /* MHMeViewController.m in Sources */,
+				08A941B01C942DB200C68B84 /* MHDiscoverViewController.m in Sources */,
 				080C84FD1C940D5700BC14ED /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MHWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carrot.baidao.MHWeiBo;
@@ -255,6 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MHWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carrot.baidao.MHWeiBo;
@@ -281,6 +357,7 @@
 				080C850B1C940D5700BC14ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

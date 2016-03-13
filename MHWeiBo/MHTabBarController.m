@@ -57,10 +57,11 @@
 
 - (void)setupChildControllers:(UIViewController*)controller title:(NSString*)title image:(NSString*)image selectedImage:(NSString*)selectedImage{
     MHNavigationController* nav = [[MHNavigationController alloc] initWithRootViewController:controller];
+    
     controller.title = title;
     controller.tabBarItem.selectedImage = [UIImage imageWithName:selectedImage];
     controller.tabBarItem.image = [UIImage imageWithName:image];
-
+    
     [self addChildViewController:nav];
     
     [self.myTabBar addTabButtonWithTabBarItem:controller.tabBarItem];

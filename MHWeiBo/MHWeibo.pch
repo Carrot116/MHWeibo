@@ -19,6 +19,8 @@
 #import <Foundation/Foundation.h>
 #import "UIImage+IOSVersion.h"
 
+#import <Availability.h>
+
 // 1.判断是否为iOS7
 #define MHiOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 

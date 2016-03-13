@@ -13,6 +13,7 @@
 #import "MHMeViewController.h"
 #import "MHHomeViewController.h"
 #import "UIImage+IOSVersion.h"
+#import "MHNavigationController.h"
 
 @interface MHTabBarController () < MHTabBarDelegate>
 
@@ -55,7 +56,7 @@
 }
 
 - (void)setupChildControllers:(UIViewController*)controller title:(NSString*)title image:(NSString*)image selectedImage:(NSString*)selectedImage{
-    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:controller];
+    MHNavigationController* nav = [[MHNavigationController alloc] initWithRootViewController:controller];
     controller.title = title;
     controller.tabBarItem.selectedImage = [UIImage imageWithName:selectedImage];
     controller.tabBarItem.image = [UIImage imageWithName:image];

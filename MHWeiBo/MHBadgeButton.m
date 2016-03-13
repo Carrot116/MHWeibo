@@ -7,7 +7,6 @@
 //
 
 #import "MHBadgeButton.h"
-#import <Availability.h>
 
 @implementation MHBadgeButton
 

@@ -16,6 +16,7 @@
 		080C85211C941F5D00BC14ED /* MHTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 080C85201C941F5D00BC14ED /* MHTabBarButton.m */; };
 		0860494A1C94662000A541E1 /* UIImage+IOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 086049491C94662000A541E1 /* UIImage+IOSVersion.m */; };
 		0860494E1C947A2400A541E1 /* MHBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0860494D1C947A2400A541E1 /* MHBadgeButton.m */; };
+		0891014C1C953868002C2680 /* MHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891014B1C953868002C2680 /* MHNavigationController.m */; };
 		08A941B01C942DB200C68B84 /* MHDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A941AF1C942DB200C68B84 /* MHDiscoverViewController.m */; };
 		08A941B31C942DCA00C68B84 /* MHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A941B21C942DCA00C68B84 /* MHHomeViewController.m */; };
 		08A941B61C942DE600C68B84 /* MHMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A941B51C942DE600C68B84 /* MHMeViewController.m */; };
@@ -41,6 +42,8 @@
 		0860494B1C946FD900A541E1 /* MHWeibo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHWeibo.pch; sourceTree = "<group>"; };
 		0860494C1C947A2400A541E1 /* MHBadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHBadgeButton.h; sourceTree = "<group>"; };
 		0860494D1C947A2400A541E1 /* MHBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHBadgeButton.m; sourceTree = "<group>"; };
+		0891014A1C953868002C2680 /* MHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHNavigationController.h; sourceTree = "<group>"; };
+		0891014B1C953868002C2680 /* MHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHNavigationController.m; sourceTree = "<group>"; };
 		08A941AE1C942DB200C68B84 /* MHDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHDiscoverViewController.h; sourceTree = "<group>"; };
 		08A941AF1C942DB200C68B84 /* MHDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHDiscoverViewController.m; sourceTree = "<group>"; };
 		08A941B11C942DCA00C68B84 /* MHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHHomeViewController.h; sourceTree = "<group>"; };
@@ -108,16 +111,11 @@
 		080C85181C941D5A00BC14ED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				080C85151C941C9A00BC14ED /* MHTabBarController.h */,
-				080C85161C941C9A00BC14ED /* MHTabBarController.m */,
-				08A941AE1C942DB200C68B84 /* MHDiscoverViewController.h */,
-				08A941AF1C942DB200C68B84 /* MHDiscoverViewController.m */,
-				08A941B11C942DCA00C68B84 /* MHHomeViewController.h */,
-				08A941B21C942DCA00C68B84 /* MHHomeViewController.m */,
-				08A941B41C942DE600C68B84 /* MHMeViewController.h */,
-				08A941B51C942DE600C68B84 /* MHMeViewController.m */,
-				08A941B71C942DFD00C68B84 /* MHMessageViewController.h */,
-				08A941B81C942DFD00C68B84 /* MHMessageViewController.m */,
+				089101491C95380D002C2680 /* Main */,
+				089101481C9537DF002C2680 /* Me */,
+				089101471C9537D4002C2680 /* Discover */,
+				089101461C9537CC002C2680 /* Message */,
+				089101451C9537C1002C2680 /* Home */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -156,6 +154,53 @@
 				086049491C94662000A541E1 /* UIImage+IOSVersion.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		089101451C9537C1002C2680 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				08A941B11C942DCA00C68B84 /* MHHomeViewController.h */,
+				08A941B21C942DCA00C68B84 /* MHHomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		089101461C9537CC002C2680 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				08A941B71C942DFD00C68B84 /* MHMessageViewController.h */,
+				08A941B81C942DFD00C68B84 /* MHMessageViewController.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		089101471C9537D4002C2680 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				08A941AE1C942DB200C68B84 /* MHDiscoverViewController.h */,
+				08A941AF1C942DB200C68B84 /* MHDiscoverViewController.m */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		089101481C9537DF002C2680 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				08A941B41C942DE600C68B84 /* MHMeViewController.h */,
+				08A941B51C942DE600C68B84 /* MHMeViewController.m */,
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
+		089101491C95380D002C2680 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				080C85151C941C9A00BC14ED /* MHTabBarController.h */,
+				080C85161C941C9A00BC14ED /* MHTabBarController.m */,
+				0891014A1C953868002C2680 /* MHNavigationController.h */,
+				0891014B1C953868002C2680 /* MHNavigationController.m */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +277,7 @@
 				0860494E1C947A2400A541E1 /* MHBadgeButton.m in Sources */,
 				080C85001C940D5700BC14ED /* AppDelegate.m in Sources */,
 				080C85171C941C9A00BC14ED /* MHTabBarController.m in Sources */,
+				0891014C1C953868002C2680 /* MHNavigationController.m in Sources */,
 				080C851E1C941DDA00BC14ED /* MHTabBar.m in Sources */,
 				080C85211C941F5D00BC14ED /* MHTabBarButton.m in Sources */,
 				08A941B91C942DFD00C68B84 /* MHMessageViewController.m in Sources */,

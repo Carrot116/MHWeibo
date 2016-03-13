@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) NSMutableArray* barButtonItems;
 @property (nonatomic, weak) MHTabBarButton* selectedButton;
+@property (nonatomic, weak) UIButton* plusButton;
 @end
 
 @implementation MHTabBar
@@ -23,8 +24,23 @@
         if (!MHiOS7) { // 非iOS7下,设置tabbar的背景
             self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithName:@"tabbar_background"]];
         }
+        [self addPlusButton];
     }
     return self;
+}
+
+- (void)addPlusButton{
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [button setBackgroundImage:[UIImage imageWithName:@"tabbar_compose_button_highlighted"] forState:UIControlStateSelected];
+    [button setBackgroundImage:[UIImage imageWithName:@"tabbar_compose_button"] forState:UIControlStateNormal];
+    
+    [button setImage:[UIImage imageWithName:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageWithName:@"tabbar_compose_icon_add_highlighted"] forState:UIControlStateSelected];
+    
+    button.frame = CGRectMake(0, 0, button.currentBackgroundImage.size.width, button.currentBackgroundImage.size.height);
+    self.plusButton = button;
+    [self addSubview:button];
 }
 
 - (NSMutableArray*)barButtonItems{
@@ -50,11 +66,23 @@
 
 - (void)layoutSubviews{
     CGRect rcFrame = self.frame;
+    CGRect rcBound = self.bounds;
+    
+    CGPoint center = CGPointZero;
+    center.x = rcBound.size.width * 0.5;
+    center.y = rcBound.size.height * 0.5;
+    self.plusButton.center = center;
+    
+    CGRect rcPlusButton = self.plusButton.frame;
 
-    CGFloat width = rcFrame.size.width / self.barButtonItems.count;
+    CGFloat width = (rcFrame.size.width - rcPlusButton.size.width) / self.barButtonItems.count;
     CGFloat height = rcFrame.size.height;
     for (int i = 0; i < self.barButtonItems.count; i++) {
-        [self.barButtonItems[i] setFrame:CGRectMake(width * i, 0, width, height)];
+        CGFloat xStart = width * i;
+        if (i >= self.barButtonItems.count / 2 ) {
+            xStart += rcPlusButton.size.width;
+        }
+        [self.barButtonItems[i] setFrame:CGRectMake(xStart, 0, width, height)];
     }
 }
 

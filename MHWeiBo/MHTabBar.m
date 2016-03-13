@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSMutableArray* barButtonItems;
 @property (nonatomic, weak) MHTabBarButton* selectedButton;
 @property (nonatomic, weak) UIButton* plusButton;
+@property (nonatomic, weak) UIImageView* backImageView;
 @end
 
 @implementation MHTabBar
@@ -24,6 +25,9 @@
         if (!MHiOS7) { // 非iOS7下,设置tabbar的背景
             self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithName:@"tabbar_background"]];
         }
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sss"]];
+        [self addSubview:imageView];
+        self.backImageView = imageView;
         [self addPlusButton];
     }
     return self;
@@ -67,6 +71,7 @@
 - (void)layoutSubviews{
     CGRect rcFrame = self.frame;
     CGRect rcBound = self.bounds;
+    self.backImageView.frame = rcBound;
     
     CGPoint center = CGPointZero;
     center.x = rcBound.size.width * 0.5;
@@ -76,13 +81,14 @@
     CGRect rcPlusButton = self.plusButton.frame;
 
     CGFloat width = (rcFrame.size.width - rcPlusButton.size.width) / self.barButtonItems.count;
-    CGFloat height = rcFrame.size.height;
+    CGFloat height = rcFrame.size.height * 0.85;
     for (int i = 0; i < self.barButtonItems.count; i++) {
         CGFloat xStart = width * i;
+        CGFloat yStart = rcFrame.size.height * 0.15;
         if (i >= self.barButtonItems.count / 2 ) {
             xStart += rcPlusButton.size.width;
         }
-        [self.barButtonItems[i] setFrame:CGRectMake(xStart, 0, width, height)];
+        [self.barButtonItems[i] setFrame:CGRectMake(xStart, yStart, width, height)];
     }
 }
 

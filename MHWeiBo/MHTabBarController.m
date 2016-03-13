@@ -35,6 +35,23 @@
     
     myTabBar.frame = self.tabBar.bounds;
     [self.tabBar addSubview:myTabBar];
+    //   self.tabBar.alpha = 0;
+    //    self.tabBar.backgroundColor = [UIColor clearColor];
+    self.tabBar.tintColor = [UIColor clearColor];
+    self.tabBar.barTintColor = [UIColor clearColor];
+    self.tabBar.backgroundImage = [UIImage imageNamed:@"sss"];
+    
+    CGRect rect = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 1);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context,[UIColor clearColor].CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.tabBar.shadowImage = img;
+    myTabBar.backgroundColor = [UIColor clearColor];
+    
+    NSLog(@"%@", NSStringFromCGRect(myTabBar.frame));
     self.myTabBar = myTabBar;
 }
 

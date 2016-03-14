@@ -14,8 +14,10 @@
 #import "MHHomeViewController.h"
 #import "UIImage+IOSVersion.h"
 #import "MHNavigationController.h"
+#import "MHWriteMessageController.h"
 
-@interface MHTabBarController () < MHTabBarDelegate>
+
+@interface MHTabBarController () < MHTabBarDelegate, MHWriteMessageDelegate>
 
 @property (nonatomic, weak) MHTabBar* myTabBar;
 @end
@@ -35,24 +37,21 @@
     
     myTabBar.frame = self.tabBar.bounds;
     [self.tabBar addSubview:myTabBar];
-    //   self.tabBar.alpha = 0;
-    //    self.tabBar.backgroundColor = [UIColor clearColor];
-    self.tabBar.tintColor = [UIColor clearColor];
-    self.tabBar.barTintColor = [UIColor clearColor];
-    self.tabBar.backgroundImage = [UIImage imageNamed:@"sss"];
-    
-    CGRect rect = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 1);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context,[UIColor clearColor].CGColor);
-    CGContextFillRect(context, rect);
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    self.tabBar.shadowImage = img;
-    myTabBar.backgroundColor = [UIColor clearColor];
-    
-    NSLog(@"%@", NSStringFromCGRect(myTabBar.frame));
     self.myTabBar = myTabBar;
+
+    //     toolbar 设置透明
+    //    self.tabBar.tintColor = [UIColor clearColor];
+    //    self.tabBar.barTintColor = [UIColor clearColor];
+    //    self.tabBar.backgroundImage = [UIImage imageNamed:@"sss"];
+    //    CGRect rect = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 1);
+    //    UIGraphicsBeginImageContext(rect.size);
+    //    CGContextRef context = UIGraphicsGetCurrentContext();
+    //    CGContextSetFillColorWithColor(context,[UIColor clearColor].CGColor);
+    //    CGContextFillRect(context, rect);
+    //    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    //    UIGraphicsEndImageContext();
+    //    self.tabBar.shadowImage = img;
+    //    myTabBar.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setupAllChildControllers{
@@ -96,6 +95,28 @@
 
 - (void)tabBar:(MHTabBar *)tabBar didSelectedButtonFrom:(NSInteger)from To:(NSInteger)to{
     [self setSelectedIndex:to];
+}
+
+
+- (void)tabBar:(MHTabBar *)tabBar didClickPlusButton:(UIButton *)button{
+//    [self presentModalViewController:vc animated:YES];
+
+    MHWriteMessageController* vc = [[MHWriteMessageController alloc]init];
+    vc.delegate = self;
+    MHNavigationController* nav = [[MHNavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:^{
+        NSLog(@"present");
+    }];
+}
+
+#pragma mark - MHWriteMessageDelegate
+- (void)writeMessageSend:(NSDictionary *)dict{
+
+}
+- (void)writeMessageCancel{
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"dismiss");
+    }];
 }
 
 @end

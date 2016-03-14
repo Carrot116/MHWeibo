@@ -7,8 +7,16 @@
 //
 
 #import "MHDiscoverViewController.h"
+#import "MHSearchBar.h"
 
 @implementation MHDiscoverViewController
+
+- (void)viewDidLoad{
+    MHSearchBar* searchBar = [MHSearchBar searchBar];
+    searchBar.bounds = CGRectMake(0, 0, 300, 34);
+    self.navigationItem.titleView = searchBar;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 20;
 }
@@ -19,7 +27,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"广场 %d", indexPath.row];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"广场 %ld", (long)indexPath.row];
     return cell;
 }
 

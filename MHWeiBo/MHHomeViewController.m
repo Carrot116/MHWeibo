@@ -7,21 +7,50 @@
 //
 
 #import "MHHomeViewController.h"
+#import "UIBarButtonItem+IconButton.h"
+#import "MHTitleButton.h"
 
 @interface MHHomeViewController()
-
+@property (weak, nonatomic) MHTitleButton* titleButton;
 @end
 
 @implementation MHHomeViewController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"写私信" style:0/*UIBarButtonSystemItemDone*/ target:self action:@selector(onClickItem:)];
+
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonImage:@"navigationbar_friendsearch" selectImage:@"navigationbar_friendsearch_highlighted" taget:self action:@selector(onClickFindFriend:)];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonImage:@"navigationbar_pop" selectImage:@"navigationbar_pop_highlighted" taget:self action:@selector(onClickFindFriend:)];
+
+    // 中间按钮
+    MHTitleButton *titleButton = [MHTitleButton titleButton];
+    // 图标
+    [titleButton setImage:[UIImage imageWithName:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    // 文字
+    [titleButton setTitle:@"晓峰有残月" forState:UIControlStateNormal];
+    // 位置和尺寸
+    titleButton.frame = CGRectMake(0, 0, 140, 40);
+    [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = titleButton;
+    self.titleButton = titleButton;
 }
 
-- (void)onClickItem:(id)sender{
-    NSLog(@"onClickItem %@", sender);
+- (void)onClickFindFriend:(UIBarButtonItem*)sender{
+    NSLog(@"找朋友");
+}
+
+- (void)onClickScan:(UIBarButtonItem*)sender{
+    NSLog(@"扫一扫");
+}
+
+- (void)titleClick:(UIButton*)sender{
+    static bool bState = NO;
+    bState = !bState;
+    if (bState) {
+        [self.titleButton setImage:[UIImage imageWithName:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
+    } else {
+        [self.titleButton setImage:[UIImage imageWithName:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    }
 }
 
 /*
@@ -39,7 +68,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"首页 %d", indexPath.row];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"首页 %ld", (long)indexPath.row];
     return cell;
 }
 

@@ -14,6 +14,9 @@
 		080C85171C941C9A00BC14ED /* MHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 080C85161C941C9A00BC14ED /* MHTabBarController.m */; };
 		080C851E1C941DDA00BC14ED /* MHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 080C851D1C941DDA00BC14ED /* MHTabBar.m */; };
 		080C85211C941F5D00BC14ED /* MHTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 080C85201C941F5D00BC14ED /* MHTabBarButton.m */; };
+		085D76881C971993002027A6 /* UIBarButtonItem+IconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D76861C971993002027A6 /* UIBarButtonItem+IconButton.m */; };
+		085D768B1C971EB8002027A6 /* MHTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D768A1C971EB8002027A6 /* MHTitleButton.m */; };
+		085D768E1C9721E6002027A6 /* MHSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D768D1C9721E6002027A6 /* MHSearchBar.m */; };
 		0860494A1C94662000A541E1 /* UIImage+IOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 086049491C94662000A541E1 /* UIImage+IOSVersion.m */; };
 		0860494E1C947A2400A541E1 /* MHBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0860494D1C947A2400A541E1 /* MHBadgeButton.m */; };
 		0891014C1C953868002C2680 /* MHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891014B1C953868002C2680 /* MHNavigationController.m */; };
@@ -21,6 +24,7 @@
 		08A941B31C942DCA00C68B84 /* MHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A941B21C942DCA00C68B84 /* MHHomeViewController.m */; };
 		08A941B61C942DE600C68B84 /* MHMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A941B51C942DE600C68B84 /* MHMeViewController.m */; };
 		08A941B91C942DFD00C68B84 /* MHMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A941B81C942DFD00C68B84 /* MHMessageViewController.m */; };
+		08F7704B1C97268D00D22545 /* MHWriteMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F7704A1C97268D00D22545 /* MHWriteMessageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,12 @@
 		080C851D1C941DDA00BC14ED /* MHTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTabBar.m; sourceTree = "<group>"; };
 		080C851F1C941F5D00BC14ED /* MHTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTabBarButton.h; sourceTree = "<group>"; };
 		080C85201C941F5D00BC14ED /* MHTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTabBarButton.m; sourceTree = "<group>"; };
+		085D76861C971993002027A6 /* UIBarButtonItem+IconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+IconButton.m"; sourceTree = "<group>"; };
+		085D76871C971993002027A6 /* UIBarButtonItem+IconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+IconButton.h"; sourceTree = "<group>"; };
+		085D76891C971EB8002027A6 /* MHTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTitleButton.h; sourceTree = "<group>"; };
+		085D768A1C971EB8002027A6 /* MHTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTitleButton.m; sourceTree = "<group>"; };
+		085D768C1C9721E6002027A6 /* MHSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSearchBar.h; sourceTree = "<group>"; };
+		085D768D1C9721E6002027A6 /* MHSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSearchBar.m; sourceTree = "<group>"; };
 		086049481C94662000A541E1 /* UIImage+IOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IOSVersion.h"; sourceTree = "<group>"; };
 		086049491C94662000A541E1 /* UIImage+IOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IOSVersion.m"; sourceTree = "<group>"; };
 		0860494B1C946FD900A541E1 /* MHWeibo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHWeibo.pch; sourceTree = "<group>"; };
@@ -52,6 +62,8 @@
 		08A941B51C942DE600C68B84 /* MHMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHMeViewController.m; sourceTree = "<group>"; };
 		08A941B71C942DFD00C68B84 /* MHMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHMessageViewController.h; sourceTree = "<group>"; };
 		08A941B81C942DFD00C68B84 /* MHMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHMessageViewController.m; sourceTree = "<group>"; };
+		08F770491C97268D00D22545 /* MHWriteMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHWriteMessageController.h; sourceTree = "<group>"; };
+		08F7704A1C97268D00D22545 /* MHWriteMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHWriteMessageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +123,8 @@
 		080C85181C941D5A00BC14ED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				08F770491C97268D00D22545 /* MHWriteMessageController.h */,
+				08F7704A1C97268D00D22545 /* MHWriteMessageController.m */,
 				089101491C95380D002C2680 /* Main */,
 				089101481C9537DF002C2680 /* Me */,
 				089101471C9537D4002C2680 /* Discover */,
@@ -125,6 +139,10 @@
 			children = (
 				080C851C1C941DDA00BC14ED /* MHTabBar.h */,
 				080C851D1C941DDA00BC14ED /* MHTabBar.m */,
+				085D76891C971EB8002027A6 /* MHTitleButton.h */,
+				085D768A1C971EB8002027A6 /* MHTitleButton.m */,
+				085D768C1C9721E6002027A6 /* MHSearchBar.h */,
+				085D768D1C9721E6002027A6 /* MHSearchBar.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -150,6 +168,8 @@
 		086049471C9462C500A541E1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				085D76871C971993002027A6 /* UIBarButtonItem+IconButton.h */,
+				085D76861C971993002027A6 /* UIBarButtonItem+IconButton.m */,
 				086049481C94662000A541E1 /* UIImage+IOSVersion.h */,
 				086049491C94662000A541E1 /* UIImage+IOSVersion.m */,
 			);
@@ -284,6 +304,10 @@
 				08A941B61C942DE600C68B84 /* MHMeViewController.m in Sources */,
 				08A941B01C942DB200C68B84 /* MHDiscoverViewController.m in Sources */,
 				0860494A1C94662000A541E1 /* UIImage+IOSVersion.m in Sources */,
+				085D768B1C971EB8002027A6 /* MHTitleButton.m in Sources */,
+				085D768E1C9721E6002027A6 /* MHSearchBar.m in Sources */,
+				085D76881C971993002027A6 /* UIBarButtonItem+IconButton.m in Sources */,
+				08F7704B1C97268D00D22545 /* MHWriteMessageController.m in Sources */,
 				080C84FD1C940D5700BC14ED /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

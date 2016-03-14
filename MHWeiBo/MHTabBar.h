@@ -11,6 +11,8 @@
 
 @protocol MHTabBarDelegate <NSObject>
 - (void)tabBar:(MHTabBar*)tabBar didSelectedButtonFrom:(NSInteger)from To:(NSInteger)to;
+
+- (void)tabBar:(MHTabBar *)tabBar didClickPlusButton:(UIButton*)button;
 @end
 
 

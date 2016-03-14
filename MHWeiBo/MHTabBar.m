@@ -25,9 +25,9 @@
         if (!MHiOS7) { // 非iOS7下,设置tabbar的背景
             self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithName:@"tabbar_background"]];
         }
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sss"]];
-        [self addSubview:imageView];
-        self.backImageView = imageView;
+//        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sss"]];
+//        [self addSubview:imageView];
+//        self.backImageView = imageView;
         [self addPlusButton];
     }
     return self;
@@ -45,6 +45,16 @@
     button.frame = CGRectMake(0, 0, button.currentBackgroundImage.size.width, button.currentBackgroundImage.size.height);
     self.plusButton = button;
     [self addSubview:button];
+
+    [button addTarget:self action:@selector(onClickPlusButton:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)onClickPlusButton:(UIButton*)sender{
+    if (self.delegate) {
+        if ([self.delegate respondsToSelector:@selector(tabBar:didClickPlusButton:)]) {
+            [self.delegate tabBar:self didClickPlusButton:self.plusButton];
+        }
+    }
 }
 
 - (NSMutableArray*)barButtonItems{

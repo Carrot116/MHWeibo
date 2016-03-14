@@ -10,6 +10,15 @@
 
 @implementation MHMessageViewController
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"写私信" style:0/*UIBarButtonSystemItemDone*/ target:self action:@selector(onClickItem:)];
+}
+
+- (void)onClickItem:(id)sender{
+    NSLog(@"onClickItem %@", sender);
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 20;
 }
@@ -20,7 +29,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"消息 %d", indexPath.row];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"消息 %ld", (long)indexPath.row];
     return cell;
 }
 
